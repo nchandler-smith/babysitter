@@ -68,4 +68,20 @@ class AppointmentTest {
 
         assertEquals(17.00, appointment.getHourlyRate());
     }
+
+    @Test
+    void addStartTimeOutsideWorkHours() {
+        Appointment appointment;
+        appointment = new Appointment("11/01/2018 4:30PM", "11/01/2018 10:00PM", 17.00);
+
+        assertFalse(appointment.startTimeIsValid());
+    }
+
+    @Test
+    void addStartTimeInsideWorkHours() {
+        Appointment appointment;
+        appointment = new Appointment("11/01/2018 8:00PM", "11/01/2018 11:00PM", 17.00);
+
+        assertTrue(appointment.startTimeIsValid());
+    }
 }

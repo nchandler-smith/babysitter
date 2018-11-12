@@ -35,4 +35,15 @@ public class Appointment implements TimeEntry {
     public double getHourlyRate() {
         return rate;
     }
+
+    public boolean startTimeIsValid() {
+        String stringMyStartTIme = "1/1/1900 5:00PM";
+        try {
+            Date myStartTime = new SimpleDateFormat("MM/dd/yyyy h:mm a").parse(stringMyStartTIme);
+            return this.startTime.after(myStartTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
