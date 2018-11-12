@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da26670c-0a3e-4a9d-872c-23024ef86b6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/babysitter/test/BillCalculatorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/BillCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BillCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/BillCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BillCalculatorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="da26670c-0a3e-4a9d-872c-23024ef86b6c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/BillCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -98,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/AppointmentTest.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="131">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#277#278#0" expanded="true" />
@@ -192,7 +187,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541993015452" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541993024668" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -323,14 +318,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541982557808</updated>
-      <workItem from="1541982560448" duration="7764000" />
+      <workItem from="1541982560448" duration="7988000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppointmentTest_getSartTime7PM - 2018.11.11 at 20h 54m 52s.xml">
-      <configuration name="AppointmentTest.getSartTime7PM" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AppointmentTest - 2018.11.11 at 20h 54m 58s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
@@ -358,13 +350,15 @@
     <history-entry file="BillCalculatorTest - 2018.11.11 at 21h 21m 43s.xml">
       <configuration name="BillCalculatorTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_in_babysitter - 2018.11.11 at 21h 23m 36s.xml">
+      <configuration name="test in babysitter" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7764000" />
+    <option name="totallyTimeSpent" value="7988000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="483" y="76" width="1076" height="749" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -433,18 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AppointmentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/BillCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -460,6 +442,18 @@
             <element signature="imports" expanded="true" />
             <element signature="e#275#276#0" expanded="true" />
             <element signature="e#327#328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
           </folding>
         </state>
       </provider>
