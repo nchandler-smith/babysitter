@@ -1,5 +1,6 @@
-package main;
+package test;
 
+import main.Appointment;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

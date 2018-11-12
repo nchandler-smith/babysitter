@@ -2,7 +2,9 @@ package main;
 
 public class BillCalculator {
 
-    public double calculateCharge() {
-        return 75.00;
+    public double calculateCharge(Appointment appointment) {
+        double duration = appointment.getEndTime().getTime() - appointment.getStartTime().getTime();
+        duration = duration / (1000 * 60 * 60);
+        return duration * appointment.getHourlyRate();
     }
 }
