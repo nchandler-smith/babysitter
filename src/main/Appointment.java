@@ -10,12 +10,13 @@ public class Appointment implements TimeEntry {
     double rate;
 
     public Appointment(String startTime, String endTime, double rate) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("h:mma");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
         try {
             this.startTime = simpleDateFormat.parse(startTime);
             this.endTime = simpleDateFormat.parse(endTime);
         } catch (ParseException e) {
-            System.out.println("Could not parse date in appointment.");
+            System.out.println("Could not parse the following date(s) in appointment: "
+                                + startTime + " or " + endTime);
         }
         this.rate = rate;
     }
