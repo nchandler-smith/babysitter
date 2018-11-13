@@ -2,33 +2,34 @@ package main;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Appointment implements TimeEntry {
-    Date startTime;
-    Date endTime;
+    Date start;
+    Date end;
     double rate;
 
-    public Appointment(String startTime, String endTime, double rate) {
+    public Appointment(String start, String end, double rate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
         try {
-            this.startTime = simpleDateFormat.parse(startTime);
-            this.endTime = simpleDateFormat.parse(endTime);
+            this.start = simpleDateFormat.parse(start);
+            this.end = simpleDateFormat.parse(end);
         } catch (ParseException e) {
             System.out.println("Could not parse the following date(s) in appointment: "
-                                + startTime + " or " + endTime);
+                                + start + " or " + end);
         }
         this.rate = rate;
     }
 
     @Override
-    public Date getStartTime() {
-        return startTime;
+    public Date getStart() {
+        return start;
     }
 
     @Override
-    public Date getEndTime() {
-        return endTime;
+    public Date getEnd() {
+        return end;
     }
 
     @Override
@@ -37,10 +38,17 @@ public class Appointment implements TimeEntry {
     }
 
     public boolean startTimeIsValid() {
-        String stringMyStartTIme = "11/1/2018 5:00PM";
+        Calendar actualStartCal = Calendar.getInstance();
+        actualStartCal.setTime(this.start);
+        String stringMyStartTIme = "5:00PM";
         try {
-            Date myStartTime = new SimpleDateFormat("MM/dd/yyyy h:mma").parse(stringMyStartTIme);
-            return this.startTime.after(myStartTime);
+            Date myStartTime = new SimpleDateFormat("h:mma").parse(stringMyStartTIme);
+            Calendar myStartCal = Calendar.getInstance();
+            myStartCal.setTime(actualStartCal.getTime());
+            myStartCal.setTime(myStartTime);
+
+            return actualStartCal.getTime().after(myStartCal.getTime());
+
         } catch (ParseException e) {
             e.printStackTrace();
         }

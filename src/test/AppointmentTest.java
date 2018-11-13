@@ -21,7 +21,7 @@ class AppointmentTest {
     void getStartTimeSixPM() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 6:00PM", "11/01/2018 7:00PM", 10.00);
-        String appointmentString = simpleDateFormat.format(appointment.getStartTime());
+        String appointmentString = simpleDateFormat.format(appointment.getStart());
 
         assertEquals("6:00PM", appointmentString);
     }
@@ -30,7 +30,7 @@ class AppointmentTest {
     void getStartTime7PM() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 7:00PM", "11/01/2018 10:00PM", 12.00);
-        String appointmentString = simpleDateFormat.format(appointment.getStartTime());
+        String appointmentString = simpleDateFormat.format(appointment.getStart());
 
         assertEquals("7:00PM", appointmentString);
     }
@@ -39,7 +39,7 @@ class AppointmentTest {
     void getEndTime10PM() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 5:00PM", "11/01/2018 10:00PM", 20.00);
-        String appointmentString = simpleDateFormat.format(appointment.getEndTime());
+        String appointmentString = simpleDateFormat.format(appointment.getEnd());
 
         assertEquals("10:00PM", appointmentString);
     }
@@ -48,7 +48,7 @@ class AppointmentTest {
     void getEndTime2AM() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 5:00PM", "11/02/2018 2:00AM", 20.00);
-        String appointmentString = simpleDateFormat.format(appointment.getEndTime());
+        String appointmentString = simpleDateFormat.format(appointment.getEnd());
 
         assertEquals("2:00AM", appointmentString);
     }
@@ -72,7 +72,7 @@ class AppointmentTest {
     @Test
     void addStartTimeOutsideWorkHours() {
         Appointment appointment;
-        appointment = new Appointment("11/01/2018 4:30PM", "11/01/2018 10:00PM", 17.00);
+        appointment = new Appointment("11/01/2018 4:00PM", "11/01/2018 10:00PM", 17.00);
 
         assertFalse(appointment.startTimeIsValid());
     }
@@ -80,7 +80,7 @@ class AppointmentTest {
     @Test
     void addStartTimeInsideWorkHours() {
         Appointment appointment;
-        appointment = new Appointment("11/01/2018 8:00PM", "11/01/2018 11:00PM", 17.00);
+        appointment = new Appointment("11/01/2018 6:00PM", "11/01/2018 11:00PM", 17.00);
 
         assertTrue(appointment.startTimeIsValid());
     }

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da26670c-0a3e-4a9d-872c-23024ef86b6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/BillCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BillCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/BillCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/BillCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/TimeEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/TimeEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/AppointmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/AppointmentTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,7 +19,7 @@
     <session id="-2099977002">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
@@ -24,23 +28,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
+          <entry key="java" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="2506" />
+          <entry key="java" value="3035" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2506" />
+          <entry key="JAVA" value="3035" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -52,33 +56,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/BillCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/BillCalculatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="353">
+              <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#838#839#0" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#942#943#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,20 +76,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="517">
+              <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/TimeEntry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -122,12 +102,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/TimeEntry.java" />
         <option value="$PROJECT_DIR$/src/main/AppointmentTest.java" />
-        <option value="$PROJECT_DIR$/src/main/BillCalculator.java" />
-        <option value="$PROJECT_DIR$/src/test/AppointmentTest.java" />
-        <option value="$PROJECT_DIR$/src/main/Appointment.java" />
         <option value="$PROJECT_DIR$/src/test/BillCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/BillCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/TimeEntry.java" />
+        <option value="$PROJECT_DIR$/src/main/Appointment.java" />
+        <option value="$PROJECT_DIR$/src/test/AppointmentTest.java" />
       </list>
     </option>
   </component>
@@ -137,11 +117,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="371" />
-    <option name="y" value="185" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="327" />
+    <option name="y" value="103" />
     <option name="width" value="1168" />
-    <option name="height" value="749" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -186,7 +166,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542072274439" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542081153425" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -215,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.test in babysitter">
+  <component name="RunManager" selected="JUnit.AppointmentTest">
     <configuration name="AppointmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="babysitter" />
       <extension name="coverage">
@@ -301,10 +281,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppointmentTest" />
+        <item itemvalue="JUnit.AppointmentTest.addStartTimeOutsideWorkHours" />
         <item itemvalue="JUnit.test in babysitter" />
         <item itemvalue="JUnit.AppointmentTest.addStartTimeInsideWorkHours" />
-        <item itemvalue="JUnit.AppointmentTest.addStartTimeOutsideWorkHours" />
-        <item itemvalue="JUnit.AppointmentTest" />
         <item itemvalue="JUnit.AppointmentTest.getHourlyRate17" />
       </list>
     </recent_temporary>
@@ -327,44 +307,45 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 00m 21s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 01m 40s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 02m 26s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 02m 50s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 02m 59s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 03m 06s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_addStartTimeInsideWorkHours - 2018.11.12 at 19h 03m 12s.xml">
-      <configuration name="AppointmentTest.addStartTimeInsideWorkHours" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test_in_babysitter - 2018.11.12 at 19h 03m 30s.xml">
+    <history-entry file="test_in_babysitter - 2018.11.12 at 21h 50m 00s.xml">
       <configuration name="test in babysitter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_in_babysitter - 2018.11.12 at 19h 10m 41s.xml">
+    <history-entry file="test_in_babysitter - 2018.11.12 at 21h 50m 22s.xml">
       <configuration name="test in babysitter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="test_in_babysitter - 2018.11.12 at 19h 20m 47s.xml">
-      <configuration name="test in babysitter" configurationId="JUnit" />
+    <history-entry file="AppointmentTest_addStartTimeOutsideWorkHours - 2018.11.12 at 21h 51m 01s.xml">
+      <configuration name="AppointmentTest.addStartTimeOutsideWorkHours" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest_addStartTimeOutsideWorkHours - 2018.11.12 at 21h 51m 20s.xml">
+      <configuration name="AppointmentTest.addStartTimeOutsideWorkHours" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest_addStartTimeOutsideWorkHours - 2018.11.12 at 21h 51m 29s.xml">
+      <configuration name="AppointmentTest.addStartTimeOutsideWorkHours" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest_addStartTimeOutsideWorkHours - 2018.11.12 at 21h 51m 38s.xml">
+      <configuration name="AppointmentTest.addStartTimeOutsideWorkHours" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.12 at 21h 51m 57s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.12 at 21h 52m 13s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.12 at 21h 52m 23s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.12 at 21h 52m 35s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12833000" />
+    <option name="totallyTimeSpent" value="17480000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="327" y="103" width="1168" height="806" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.16971917" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988662" visible="true" weight="0.24689165" />
       <window_info id="Structure" order="1" sideWeight="0.5011338" side_tool="true" weight="0.2640232" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -373,16 +354,16 @@
       <window_info id="Favorites" order="6" sideWeight="0.5011338" side_tool="true" weight="0.2640232" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26836735" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26750702" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.25510204" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3396739" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.22040816" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32857144" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3277311" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -402,13 +383,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Ledger.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/TimeEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/src.zip!/java/text/DateFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -416,26 +390,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/BillCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/TimeEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        <state relative-caret-position="90">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/BillCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="81" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/BillCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
+        <state relative-caret-position="408">
           <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -443,10 +414,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="49" column="12" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#942#943#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="517">
+          <caret line="82" column="51" selection-start-line="82" selection-start-column="51" selection-end-line="82" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
