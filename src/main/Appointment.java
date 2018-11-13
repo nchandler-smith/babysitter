@@ -40,12 +40,19 @@ public class Appointment implements TimeEntry {
     public boolean startTimeIsValid() {
         Calendar actualStartCal = Calendar.getInstance();
         actualStartCal.setTime(this.start);
+        int startYear = actualStartCal.get(Calendar.YEAR);
+        int startMonth = actualStartCal.get(Calendar.MONTH);
+        int startDay = actualStartCal.get(Calendar.DAY_OF_MONTH);
+        
+
         String stringMyStartTIme = "5:00PM";
         try {
             Date myStartTime = new SimpleDateFormat("h:mma").parse(stringMyStartTIme);
             Calendar myStartCal = Calendar.getInstance();
-            myStartCal.setTime(actualStartCal.getTime());
             myStartCal.setTime(myStartTime);
+            myStartCal.set(Calendar.YEAR, startYear);
+            myStartCal.set(Calendar.MONTH, startMonth);
+            myStartCal.set(Calendar.DAY_OF_MONTH, startDay);
 
             return actualStartCal.getTime().after(myStartCal.getTime());
 

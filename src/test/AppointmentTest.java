@@ -70,7 +70,7 @@ class AppointmentTest {
     }
 
     @Test
-    void addStartTimeOutsideWorkHours() {
+    void addStartTimeOutsideWorkHoursReturnsFalse() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 4:00PM", "11/01/2018 10:00PM", 17.00);
 
@@ -78,7 +78,7 @@ class AppointmentTest {
     }
 
     @Test
-    void addStartTimeInsideWorkHours() {
+    void addStartTimeInsideWorkHoursReturnsTrue() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 6:00PM", "11/01/2018 11:00PM", 17.00);
 
