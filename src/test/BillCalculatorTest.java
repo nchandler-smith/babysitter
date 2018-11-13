@@ -17,7 +17,7 @@ class BillCalculatorTest {
     }
 
     @Test
-    void StartAt5pmEndAt10pmAt15DollarsPerHourEquals75Dollars() {
+    void startAt5pmEndAt10pmAt15DollarsPerHourEquals75Dollars() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 5:00PM", "11/01/2018 10:00PM", 15.00);
 
@@ -25,7 +25,7 @@ class BillCalculatorTest {
     }
 
     @Test
-    void StartAt6pmEndAt10pmAt20DollarsPerHourEquals80Dollars() {
+    void startAt6pmEndAt10pmAt20DollarsPerHourEquals80Dollars() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 6:00PM", "11/01/2018 10:00PM", 20.00);
 
@@ -33,7 +33,7 @@ class BillCalculatorTest {
     }
 
     @Test
-    void StartAt5PMEndAt4AMAt25DollarsPerHourEquals275Dollars() {
+    void startAt5PMEndAt4AMAt25DollarsPerHourEquals275Dollars() {
         Appointment appointment;
         appointment = new Appointment("11/01/2018 5:00PM", "11/02/2018 4:00AM", 25.00);
 
