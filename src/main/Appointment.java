@@ -37,9 +37,9 @@ public class Appointment implements TimeEntry {
     }
 
     public boolean startTimeIsValid() {
-        String stringMyStartTIme = "1/1/1900 5:00PM";
+        String stringMyStartTIme = "11/1/2018 5:00PM";
         try {
-            Date myStartTime = new SimpleDateFormat("MM/dd/yyyy h:mm a").parse(stringMyStartTIme);
+            Date myStartTime = new SimpleDateFormat("MM/dd/yyyy h:mma").parse(stringMyStartTIme);
             return this.startTime.after(myStartTime);
         } catch (ParseException e) {
             e.printStackTrace();
