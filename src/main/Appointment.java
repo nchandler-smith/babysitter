@@ -62,6 +62,25 @@ public class Appointment implements TimeEntry {
     }
 
     public boolean endTimeIsValid() {
+        Calendar actualEndCal = Calendar.getInstance();
+        actualEndCal.setTime(this.end);
+        int endYear = actualEndCal.get(Calendar.YEAR);
+        int endMonth = actualEndCal.get(Calendar.MONTH);
+        int endDay = actualEndCal.get(Calendar.DAY_OF_MONTH);
+
+        String stringMyEndTime = "4:00AM";
+        try {
+            Date myEndTime = new SimpleDateFormat("h:mma").parse(stringMyEndTime);
+            Calendar myEndCal = Calendar.getInstance();
+            myEndCal.setTime(myEndTime);
+            myEndCal.set(Calendar.YEAR, endYear);
+            myEndCal.set(Calendar.MONTH, endMonth);
+            myEndCal.set(Calendar.DAY_OF_MONTH, endDay);
+
+            return actualEndCal.getTime().before(myEndCal.getTime());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         return false;
     }
 }
