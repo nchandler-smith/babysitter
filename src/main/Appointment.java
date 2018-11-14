@@ -6,15 +6,15 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Appointment implements TimeEntry {
-    Date start;
-    Date end;
+    Calendar start = Calendar.getInstance();
+    Calendar end = Calendar.getInstance();
     double rate;
 
     public Appointment(String start, String end, double rate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
         try {
-            this.start = simpleDateFormat.parse(start);
-            this.end = simpleDateFormat.parse(end);
+            this.start.setTime(simpleDateFormat.parse(start));
+            this.end.setTime(simpleDateFormat.parse(end));
         } catch (ParseException e) {
             System.out.println("Could not parse the following date(s) in appointment: "
                                 + start + " or " + end);
@@ -23,12 +23,12 @@ public class Appointment implements TimeEntry {
     }
 
     @Override
-    public Date getStart() {
+    public Calendar getStart() {
         return start;
     }
 
     @Override
-    public Date getEnd() {
+    public Calendar getEnd() {
         return end;
     }
 
@@ -36,7 +36,7 @@ public class Appointment implements TimeEntry {
     public double getHourlyRate() {
         return rate;
     }
-
+/*
     public boolean startTimeIsValid() {
         Calendar actualStartCal = Calendar.getInstance();
         actualStartCal.setTime(this.start);
@@ -44,7 +44,7 @@ public class Appointment implements TimeEntry {
         int startMonth = actualStartCal.get(Calendar.MONTH);
         int startDay = actualStartCal.get(Calendar.DAY_OF_MONTH);
 
-        String stringMyStartTIme = "5:00PM";
+        String stringMyStartTIme = "4:59PM";
         try {
             Date myStartTime = new SimpleDateFormat("h:mma").parse(stringMyStartTIme);
             Calendar myStartCal = Calendar.getInstance();
@@ -68,7 +68,7 @@ public class Appointment implements TimeEntry {
         int endMonth = actualEndCal.get(Calendar.MONTH);
         int endDay = actualEndCal.get(Calendar.DAY_OF_MONTH);
 
-        String stringMyEndTime = "4:00AM";
+        String stringMyEndTime = "4:01AM";
         try {
             Date myEndTime = new SimpleDateFormat("h:mma").parse(stringMyEndTime);
             Calendar myEndCal = Calendar.getInstance();
@@ -83,4 +83,5 @@ public class Appointment implements TimeEntry {
         }
         return false;
     }
+*/
 }

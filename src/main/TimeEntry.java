@@ -1,9 +1,10 @@
 package main;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public interface TimeEntry {
-    public Date getStart();
-    public Date getEnd();
+    public Calendar getStart();
+    public Calendar getEnd();
     public double getHourlyRate();
 }
