@@ -43,7 +43,6 @@ public class Appointment implements TimeEntry {
         int startYear = actualStartCal.get(Calendar.YEAR);
         int startMonth = actualStartCal.get(Calendar.MONTH);
         int startDay = actualStartCal.get(Calendar.DAY_OF_MONTH);
-        
 
         String stringMyStartTIme = "5:00PM";
         try {
@@ -59,6 +58,10 @@ public class Appointment implements TimeEntry {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        return false;
+    }
+
+    public boolean endTimeIsValid() {
         return false;
     }
 }

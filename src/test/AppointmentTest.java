@@ -84,4 +84,12 @@ class AppointmentTest {
 
         assertTrue(appointment.startTimeIsValid());
     }
+
+    @Test
+    void validateEndTimeOusideWorkingHoursReturnsFalse() {
+        Appointment appointment;
+        appointment = new Appointment("11/1/2018 5:00PM", "11/2/2018 8:00AM", 18);
+
+        assertFalse(appointment.endTimeIsValid());
+    }
 }
