@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da26670c-0a3e-4a9d-872c-23024ef86b6c" name="Default Changelist" comment="">
+    <list default="true" id="da26670c-0a3e-4a9d-872c-23024ef86b6c" name="Default Changelist" comment="refactored start and end time validators">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/babysitter/main/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/babysitter/main/Appointment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/babysitter/test/AppointmentTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/babysitter/test/AppointmentTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/AppointmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/AppointmentTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +17,7 @@
     <session id="-2099977002">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.2" value="1" />
@@ -45,14 +43,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="6478" />
-          <entry key="txt" value="109" />
+          <entry key="java" value="7164" />
+          <entry key="txt" value="168" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6478" />
-          <entry key="PLAIN_TEXT" value="111" />
+          <entry key="JAVA" value="7164" />
+          <entry key="PLAIN_TEXT" value="170" />
         </counts>
       </usages-collector>
     </session>
@@ -62,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            <state relative-caret-position="810">
+              <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -74,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
+            <state relative-caret-position="813">
               <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,9 +116,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="259" />
+    <option name="y" value="124" />
+    <option name="width" value="1167" />
+    <option name="height" value="781" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -165,7 +165,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542251293427" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542253416159" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -308,7 +308,7 @@
       <workItem from="1542216577967" duration="7000" />
       <workItem from="1542222593375" duration="428000" />
       <workItem from="1542242316251" duration="252000" />
-      <workItem from="1542244291724" duration="6280000" />
+      <workItem from="1542244291724" duration="8453000" />
     </task>
     <task id="LOCAL-00001" summary="atart, end, and rate are now private and final">
       <created>1542249899783</created>
@@ -324,47 +324,53 @@
       <option name="project" value="LOCAL" />
       <updated>1542250693502</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="validating end time">
+      <created>1542251305214</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542251305214</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppointmentTest - 2018.11.14 at 20h 54m 51s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 08m 15s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 20h 55m 13s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 19m 10s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 20h 56m 57s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 21m 07s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 20h 57m 36s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 21m 47s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 20h 57m 50s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 33m 44s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 21h 02m 08s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 36m 51s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 21h 03m 28s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 37m 39s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 21h 04m 40s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 40m 55s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 21h 05m 15s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 41m 51s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AppointmentTest - 2018.11.14 at 21h 07m 42s.xml">
+    <history-entry file="AppointmentTest - 2018.11.14 at 21h 43m 16s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34843000" />
+    <option name="totallyTimeSpent" value="37016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49364406" visible="true" weight="0.16056167" />
       <window_info id="Structure" order="1" sideWeight="0.50635594" side_tool="true" weight="0.26465365" />
@@ -375,7 +381,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50635594" side_tool="true" weight="0.26465365" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27653062" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27653062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -406,7 +412,9 @@
     <MESSAGE value="removing unused import" />
     <MESSAGE value="atart, end, and rate are now private and final" />
     <MESSAGE value="checking start time is valid" />
-    <option name="LAST_COMMIT_MESSAGE" value="checking start time is valid" />
+    <MESSAGE value="validating end time" />
+    <MESSAGE value="refactored start and end time validators" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored start and end time validators" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/Ledger.java" />
@@ -444,20 +452,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
+        <state relative-caret-position="810">
+          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
+    <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        <state relative-caret-position="813">
+          <caret line="57" column="47" selection-start-line="57" selection-start-column="47" selection-end-line="57" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

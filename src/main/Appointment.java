@@ -26,52 +26,34 @@ public class Appointment {
         return (int) Math.ceil( (double) duration / (1000 * 60 * 60)) * this.hourlyRate;
     }
 
-
-
     public boolean isStartTimeValid() {
-        Calendar actualStartCal = Calendar.getInstance();
-        actualStartCal.setTime(this.start.getTime());
-        int startYear = actualStartCal.get(Calendar.YEAR);
-        int startMonth = actualStartCal.get(Calendar.MONTH);
-        int startDay = actualStartCal.get(Calendar.DAY_OF_MONTH);
-
-        String stringMyStartTIme = "4:59PM";
-        try {
-            Date myStartTime = new SimpleDateFormat("h:mma").parse(stringMyStartTIme);
-            Calendar myStartCal = Calendar.getInstance();
-            myStartCal.setTime(myStartTime);
-            myStartCal.set(Calendar.YEAR, startYear);
-            myStartCal.set(Calendar.MONTH, startMonth);
-            myStartCal.set(Calendar.DAY_OF_MONTH, startDay);
-
-            return actualStartCal.getTime().after(myStartCal.getTime());
-
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return false;
+        Calendar allowedStartAfter = stringTimeToCalendar("4:59PM", this.start);
+        return this.start.getTime().after(allowedStartAfter.getTime());
     }
 
     public boolean isEndTimeValid() {
-        Calendar actualEndCal = Calendar.getInstance();
-        actualEndCal.setTime(this.end.getTime());
-        int endYear = actualEndCal.get(Calendar.YEAR);
-        int endMonth = actualEndCal.get(Calendar.MONTH);
-        int endDay = actualEndCal.get(Calendar.DAY_OF_MONTH);
+        Calendar allowedEndBefore = stringTimeToCalendar("4:01AM", this.end);
+        return this.end.getTime().before(allowedEndBefore.getTime());
+    }
 
-        String stringMyEndTime = "4:01AM";
+    private Calendar stringTimeToCalendar(String stringTime, Calendar calendar) {
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+
         try {
-            Date myEndTime = new SimpleDateFormat("h:mma").parse(stringMyEndTime);
-            Calendar myEndCal = Calendar.getInstance();
-            myEndCal.setTime(myEndTime);
-            myEndCal.set(Calendar.YEAR, endYear);
-            myEndCal.set(Calendar.MONTH, endMonth);
-            myEndCal.set(Calendar.DAY_OF_MONTH, endDay);
-
-            return actualEndCal.getTime().before(myEndCal.getTime());
+            Date time = new SimpleDateFormat("h:mma").parse(stringTime);
+            Calendar calendarOut = Calendar.getInstance();
+            calendarOut.setTime(time);
+            calendarOut.set(Calendar.YEAR, year);
+            calendarOut.set(Calendar.MONTH, month);
+            calendarOut.set(Calendar.DAY_OF_MONTH, day);
+            return calendarOut;
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return false;
+        Calendar errorCalendar = Calendar.getInstance();
+        return errorCalendar;
     }
+
 }
