@@ -28,7 +28,7 @@ public class Appointment {
 
 
 
-    public boolean startTimeIsValid() {
+    public boolean isStartTimeValid() {
         Calendar actualStartCal = Calendar.getInstance();
         actualStartCal.setTime(this.start.getTime());
         int startYear = actualStartCal.get(Calendar.YEAR);
@@ -51,10 +51,10 @@ public class Appointment {
         }
         return false;
     }
-/*
-    public boolean endTimeIsValid() {
+
+    public boolean isEndTimeValid() {
         Calendar actualEndCal = Calendar.getInstance();
-        actualEndCal.setTime(this.end);
+        actualEndCal.setTime(this.end.getTime());
         int endYear = actualEndCal.get(Calendar.YEAR);
         int endMonth = actualEndCal.get(Calendar.MONTH);
         int endDay = actualEndCal.get(Calendar.DAY_OF_MONTH);
@@ -74,5 +74,4 @@ public class Appointment {
         }
         return false;
     }
-    */
 }

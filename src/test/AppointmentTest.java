@@ -31,17 +31,30 @@ class AppointmentTest {
     }
 
     @Test
-    void StartFourFiftyNineIsStartTimeValidIsFalse() {
+    void StartFourFiftyNineIsStartTimeValidEqualsFalse() {
         Appointment appointment = new Appointment("11/4/2018 4:59PM", "11/5/2018 10:00PM", 10);
 
-        assertFalse(appointment.startTimeIsValid());
+        assertFalse(appointment.isStartTimeValid());
     }
 
     @Test
-    void Start5PMIsStartTimeValidIsTrue() {
+    void Start5PMIsStartTimeValidEqualsTrue() {
         Appointment appointment = new Appointment("11/5/2018 5:00PM", "11/6/2018 10:00PM", 10);
 
-        assertTrue(appointment.startTimeIsValid());
+        assertTrue(appointment.isStartTimeValid());
     }
 
+    @Test
+    void EndTimeFourOhOneAMIsEndTimeValidEqualsFalse() {
+        Appointment appointment = new Appointment("11/6/2018 5:00PM", "11/7/2018 4:01AM", 10);
+
+        assertFalse(appointment.isEndTimeValid());
+    }
+
+    @Test
+    void EndTimeFourAMIsEndTimeValidEqualsTrue() {
+        Appointment appointment = new Appointment("11/7/2018 5:00PM", "11/8/2018 4:00AM", 10);
+
+        assertTrue(appointment.isEndTimeValid());
+    }
 }
