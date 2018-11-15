@@ -3,39 +3,31 @@ package main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
-public class Appointment implements TimeEntry {
+import static java.lang.StrictMath.ceil;
+
+public class Appointment {
     Calendar start = Calendar.getInstance();
     Calendar end = Calendar.getInstance();
-    double rate;
+    double hourlyRate;
 
-    public Appointment(String start, String end, double rate) {
+    public Appointment(String start, String end, double hourlyRate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
         try {
             this.start.setTime(simpleDateFormat.parse(start));
             this.end.setTime(simpleDateFormat.parse(end));
         } catch (ParseException e) {
-            System.out.println("Could not parse the following date(s) in appointment: "
-                                + start + " or " + end);
+            e.printStackTrace();
         }
-        this.rate = rate;
+        this.hourlyRate = hourlyRate;
     }
 
-    @Override
-    public Calendar getStart() {
-        return start;
+    public double calculateDollarsEarned() {
+        long duration = this.end.getTimeInMillis() - this.start.getTimeInMillis();
+        return (int) Math.ceil( (double) duration / (1000 * 60 * 60)) * this.hourlyRate;
     }
 
-    @Override
-    public Calendar getEnd() {
-        return end;
-    }
 
-    @Override
-    public double getHourlyRate() {
-        return rate;
-    }
 /*
     public boolean startTimeIsValid() {
         Calendar actualStartCal = Calendar.getInstance();
@@ -83,5 +75,5 @@ public class Appointment implements TimeEntry {
         }
         return false;
     }
-*/
+    */
 }

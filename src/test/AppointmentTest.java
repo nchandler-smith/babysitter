@@ -1,103 +1,31 @@
 package test;
 
 import main.Appointment;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppointmentTest {
 
-    DateTimeFormatter dateTimeFormatter;
-
-    @BeforeEach
-    void setup() { dateTimeFormatter = DateTimeFormatter.ofPattern("h:mma"); }
-
     @Test
-    void getStartTimeSixPM() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 6:00PM", "11/01/2018 7:00PM", 10.00);
-        String appointmentString = appointment.getStart().getTime().toString();
+    void Start5PMEnd10PMAt10DollarsPerHourEarns50Dollars() {
+        Appointment appointment = new Appointment("11/1/2018 5:00PM", "11/1/2018 10:00PM", 10);
 
-        assertEquals("6:00PM", appointmentString);
+        assertEquals(50, appointment.calculateDollarsEarned());
     }
-/*
-    @Test
-    void getStartTime7PM() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 7:00PM", "11/01/2018 10:00PM", 12.00);
-        String appointmentString = simpleDateFormat.format(appointment.getStart());
 
-        assertEquals("7:00PM", appointmentString);
+
+    @Test
+    void Start5PMEnd4AMAt10DollarsPerHourEarns110Dollars() {
+        Appointment appointment = new Appointment("11/2/2018 5:00PM", "11/3/2018 4:00AM", 10);
+
+        assertEquals(110, appointment.calculateDollarsEarned());
     }
 
     @Test
-    void getEndTime10PM() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 5:00PM", "11/01/2018 10:00PM", 20.00);
-        String appointmentString = simpleDateFormat.format(appointment.getEnd());
+    void StartFivePMEndNineThirtyAMEarns50Dollars() {
+        Appointment appointment = new Appointment("11/3/2018 5:00PM", "11/3/2018 9:30PM", 10);
 
-        assertEquals("10:00PM", appointmentString);
+        assertEquals(50, appointment.calculateDollarsEarned());
     }
 
-    @Test
-    void getEndTime2AM() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 5:00PM", "11/02/2018 2:00AM", 20.00);
-        String appointmentString = simpleDateFormat.format(appointment.getEnd());
-
-        assertEquals("2:00AM", appointmentString);
-    }
-
-    @Test
-    void getHourlyRate15() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 8:00PM", "11/01/2018 11:00PM", 15.00);
-
-        assertEquals(15.00, appointment.getHourlyRate());
-    }
-
-    @Test
-    void getHourlyRate17() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 8:00PM", "11/01/2018 11:00PM", 17.00);
-
-        assertEquals(17.00, appointment.getHourlyRate());
-    }
-/*
-    @Test
-    void validateStartTimeOutsideWorkHoursReturnsFalse() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 4:59PM", "11/01/2018 10:00PM", 17.00);
-
-        assertFalse(appointment.startTimeIsValid());
-    }
-
-    @Test
-    void validateStartTimeInsideWorkHoursReturnsTrue() {
-        Appointment appointment;
-        appointment = new Appointment("11/01/2018 5:00PM", "11/01/2018 11:00PM", 17.00);
-
-        assertTrue(appointment.startTimeIsValid());
-    }
-
-    @Test
-    void validateEndTimeOutsideWorkingHoursReturnsFalse() {
-        Appointment appointment;
-        appointment = new Appointment("11/1/2018 5:00PM", "11/2/2018 4:01AM", 18);
-
-        assertFalse(appointment.endTimeIsValid());
-    }
-
-    @Test
-    void validateEndTimeInsideworkingHoursReturnsTrue() {
-        Appointment appointment;
-        appointment = new Appointment ("11/1/2018 5:00PM", "11/2/2018 4:00AM", 18);
-
-        assertTrue(appointment.endTimeIsValid());
-    }
-*/
 }
