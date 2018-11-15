@@ -4,12 +4,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import static java.lang.StrictMath.ceil;
-
 public class Appointment {
-    Calendar start = Calendar.getInstance();
-    Calendar end = Calendar.getInstance();
-    double hourlyRate;
+    private final Calendar start = Calendar.getInstance();
+    private final Calendar end = Calendar.getInstance();
+    private final double hourlyRate;
 
     public Appointment(String start, String end, double hourlyRate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
