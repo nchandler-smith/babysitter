@@ -3,6 +3,7 @@ package main;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Appointment {
     private final Calendar start = Calendar.getInstance();
@@ -26,10 +27,10 @@ public class Appointment {
     }
 
 
-/*
+
     public boolean startTimeIsValid() {
         Calendar actualStartCal = Calendar.getInstance();
-        actualStartCal.setTime(this.start);
+        actualStartCal.setTime(this.start.getTime());
         int startYear = actualStartCal.get(Calendar.YEAR);
         int startMonth = actualStartCal.get(Calendar.MONTH);
         int startDay = actualStartCal.get(Calendar.DAY_OF_MONTH);
@@ -50,7 +51,7 @@ public class Appointment {
         }
         return false;
     }
-
+/*
     public boolean endTimeIsValid() {
         Calendar actualEndCal = Calendar.getInstance();
         actualEndCal.setTime(this.end);
