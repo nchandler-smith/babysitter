@@ -27,7 +27,8 @@ public class Appointment {
 
     private int calculateEarningsAtRate(Calendar start, Calendar end, double hourlyRate){
         long duration = end.getTimeInMillis() - start.getTimeInMillis();
-        return (int) (hourlyRate * (int) Math.ceil( (double) duration  / 3600000));
+        int earnings = (int) (hourlyRate * (int) Math.ceil( (double) duration  / 3600000));
+        return Math.max(earnings, 0);
     }
 
     public double calculateDollarsEarned() {
@@ -35,7 +36,10 @@ public class Appointment {
             return this.calculateEarningsAtRate(this.start, this.end, hourlyRate);
         } else if(this.family == "A") {
             Calendar elevenPM = this.stringTimeToCalendar("11:00PM", this.start);
-            return this.calculateEarningsAtRate(elevenPM, this.end, 20) + 90;
+            if ( this.end.getTime().after(elevenPM.getTime()) ) {
+                return this.calculateEarningsAtRate(elevenPM, this.end, 20) + 90;
+            }
+            return this.calculateEarningsAtRate(this.start, this.end, 15);
         }
         return Double.parseDouble(null);
     }
