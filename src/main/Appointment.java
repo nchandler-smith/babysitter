@@ -30,7 +30,7 @@ public class Appointment {
             long duration = this.end.getTimeInMillis() - this.start.getTimeInMillis();
             return (int) Math.ceil((double) duration / (1000 * 60 * 60)) * this.hourlyRate;
         }
-        return 190;
+        return 90;
     }
 
     public boolean isStartTimeValid() {
