@@ -6,7 +6,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Appointment {
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
     private final Calendar start = Calendar.getInstance();
     private final Calendar end = Calendar.getInstance();
     private final double hourlyRate;
