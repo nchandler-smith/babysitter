@@ -29,8 +29,11 @@ public class Appointment {
         if (this.family == "") {
             long duration = this.end.getTimeInMillis() - this.start.getTimeInMillis();
             return (int) Math.ceil((double) duration / (1000 * 60 * 60)) * this.hourlyRate;
+        } else if(this.family == "A") {
+            long elevenPM = this.stringTimeToCalendar("11:00PM", this.start).getTimeInMillis();
+            return (this.end.getTimeInMillis() - elevenPM) * 20 / (1000 *60 * 60) + 90;
         }
-        return 90;
+        return Double.parseDouble(null);
     }
 
     public boolean isStartTimeValid() {
