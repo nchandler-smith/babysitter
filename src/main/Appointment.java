@@ -6,31 +6,22 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Appointment {
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
     private final Calendar start = Calendar.getInstance();
     private final Calendar end = Calendar.getInstance();
     private final double hourlyRate;
     private final String family;
 
     public Appointment(String start, String end, double hourlyRate) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
-        try {
-            this.start.setTime(simpleDateFormat.parse(start));
-            this.end.setTime(simpleDateFormat.parse(end));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        this.start.setTime(timeStringToDate(start));
+        this.end.setTime(timeStringToDate(end));
         this.hourlyRate = hourlyRate;
         this.family = "";
     }
 
     public Appointment(String start, String end, String family){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
-        try {
-            this.start.setTime(simpleDateFormat.parse(start));
-            this.end.setTime(simpleDateFormat.parse(end));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        this.start.setTime(timeStringToDate(start));
+        this.end.setTime(timeStringToDate(end));
         this.hourlyRate = 0;
         this.family = family;
     }
@@ -39,9 +30,7 @@ public class Appointment {
         if (this.family == "") {
             long duration = this.end.getTimeInMillis() - this.start.getTimeInMillis();
             return (int) Math.ceil((double) duration / (1000 * 60 * 60)) * this.hourlyRate;
-
         }
-
         return 190;
     }
 
@@ -75,4 +64,13 @@ public class Appointment {
         return errorCalendar;
     }
 
+    private Date timeStringToDate(String timeString) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
+        try {
+            return simpleDateFormat.parse(timeString);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
