@@ -12,15 +12,15 @@ public class Appointment {
     private final String family;
 
     public Appointment(String start, String end, double hourlyRate) {
-        this.start.setTime(timeStringToDate(start));
-        this.end.setTime(timeStringToDate(end));
+        this.start.setTime(dateTimeStringToDate(start));
+        this.end.setTime(dateTimeStringToDate(end));
         this.hourlyRate = hourlyRate;
         this.family = "";
     }
 
     public Appointment(String start, String end, String family){
-        this.start.setTime(timeStringToDate(start));
-        this.end.setTime(timeStringToDate(end));
+        this.start.setTime(dateTimeStringToDate(start));
+        this.end.setTime(dateTimeStringToDate(end));
         this.hourlyRate = 0;
         this.family = family;
     }
@@ -63,7 +63,7 @@ public class Appointment {
         return errorCalendar;
     }
 
-    private Date timeStringToDate(String timeString) {
+    private Date dateTimeStringToDate(String timeString) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy h:mma");
         try {
             return simpleDateFormat.parse(timeString);
