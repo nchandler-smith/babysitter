@@ -25,13 +25,17 @@ public class Appointment {
         this.family = family;
     }
 
+    private int calculateEarningsAtRate(Calendar start, Calendar end, double hourlyRate){
+        long duration = end.getTimeInMillis() - start.getTimeInMillis();
+        return (int) (hourlyRate * (int) Math.ceil( (double) duration  / 3600000));
+    }
+
     public double calculateDollarsEarned() {
         if (this.family == "") {
-            long duration = this.end.getTimeInMillis() - this.start.getTimeInMillis();
-            return (int) Math.ceil((double) duration / (1000 * 60 * 60)) * this.hourlyRate;
+            return this.calculateEarningsAtRate(this.start, this.end, hourlyRate);
         } else if(this.family == "A") {
-            long elevenPM = this.stringTimeToCalendar("11:00PM", this.start).getTimeInMillis();
-            return (this.end.getTimeInMillis() - elevenPM) * 20 / (1000 *60 * 60) + 90;
+            Calendar elevenPM = this.stringTimeToCalendar("11:00PM", this.start);
+            return this.calculateEarningsAtRate(elevenPM, this.end, 20) + 90;
         }
         return Double.parseDouble(null);
     }
