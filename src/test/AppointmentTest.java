@@ -113,4 +113,11 @@ class AppointmentTest {
 
         assertEquals(60, appointment.calculateDollarsEarned());
     }
+
+    @Test
+    void start5PMEnd6PMForFamilyBEarns12Dollars() {
+        Appointment appointment = new Appointment("11/8/2018 5:00PM", "11/8/2018 6:00PM", "B");
+
+        assertEquals(12, appointment.calculateDollarsEarned());
+    }
 }
