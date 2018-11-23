@@ -40,6 +40,8 @@ public class Appointment {
                 return this.calculateEarningsAtRate(elevenPM, this.end, 20) + 90;
             }
             return this.calculateEarningsAtRate(this.start, this.end, 15);
+        } else if ( this.family == "C"){
+            return 84;
         }
         return Double.parseDouble(null);
     }
