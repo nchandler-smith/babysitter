@@ -38,8 +38,14 @@ public class Appointment {
         }
         else if (this.family == "B") {
             Calendar tenPM = this.stringTimeToCalendar("10:00PM", this.start);
-            if ( this.end.getTime().after(tenPM.getTime()) ) {
+            Calendar twelve01AM = Calendar.getInstance();
+            twelve01AM.setTimeInMillis(tenPM.getTimeInMillis() + 7200001);
+            if ( this.end.getTime().after(tenPM.getTime())
+                && this.end.getTime().before(twelve01AM.getTime()) ) {
                 return this.calculateEarningsAtRate(tenPM, this.end, 8) + 60;
+            }
+            else if (this.end.getTime().after(twelve01AM.getTime()) ) {
+                return this.calculateEarningsAtRate(twelve01AM, this.end, 15) + 76;
             }
             return this.calculateEarningsAtRate(this.start, this.end, 12);
         }
