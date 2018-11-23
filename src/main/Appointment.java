@@ -41,7 +41,7 @@ public class Appointment {
             }
             return this.calculateEarningsAtRate(this.start, this.end, 15);
         } else if ( this.family == "C"){
-            return 84;
+            return this.calculateEarningsAtRate(this.start, this.end, 21);
         }
         return Double.parseDouble(null);
     }
