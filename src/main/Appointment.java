@@ -31,9 +31,18 @@ public class Appointment {
         }
         else if(this.family == "A") {
             Calendar elevenPM = this.stringTimeToCalendar("11:00PM", this.start);
+            Calendar invalidEndTime = this.stringTimeToCalendar("4:01AM", this.start);
+
             if ( this.end.getTime().after(elevenPM.getTime()) ) {
-                return this.calculateEarningsAtRate(elevenPM, this.end, 20) + 90;
+                return this.calculateEarningsAtRate(elevenPM, this.end, 20)
+                        + this.calculateEarningsAtRate(this.start, elevenPM, 15);
             }
+
+            if ( this.start.get(Calendar.DAY_OF_MONTH) == this.end.get(Calendar.DAY_OF_MONTH)
+                && this.start.before(invalidEndTime)) {
+                return this.calculateEarningsAtRate(this.start, this.end, 20);
+            }
+
             return this.calculateEarningsAtRate(this.start, this.end, 15);
         }
         else if (this.family == "B") {
