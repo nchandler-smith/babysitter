@@ -65,6 +65,7 @@ public class Appointment {
 
         else if ( this.family.equals("C")){
             Calendar ninePM = this.stringTimeToCalendar("9:00PM", this.start);
+            Calendar invalidEndTime = this.stringTimeToCalendar("4:01AM", this.start);
 
             if ( this.start.after(ninePM) ) {
                 return this.calculateEarningsAtRate(this.start, this.end, 15);
@@ -73,6 +74,11 @@ public class Appointment {
             if (this.end.after(ninePM) ) {
                 return this.calculateEarningsAtRate(ninePM, this.end, 15)
                         + this.calculateEarningsAtRate(this.start, ninePM, 21);
+            }
+
+            if ( this.start.get(Calendar.DAY_OF_MONTH) == this.end.get(Calendar.DAY_OF_MONTH)
+                && this.start.before(invalidEndTime) ) {
+                return this.calculateEarningsAtRate(this.start, this.end, 15);
             }
 
             return this.calculateEarningsAtRate(this.start, this.end, 21);
