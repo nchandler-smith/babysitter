@@ -61,7 +61,8 @@ public class Appointment {
         else if ( this.family == "C"){
             Calendar ninePM = this.stringTimeToCalendar("9:00PM", this.start);
             if (this.end.getTime().after(ninePM.getTime()) ) {
-                return this.calculateEarningsAtRate(ninePM, this.end, 15) + 84;
+                return this.calculateEarningsAtRate(ninePM, this.end, 15)
+                        + this.calculateEarningsAtRate(this.start, ninePM, 21);
             }
             return this.calculateEarningsAtRate(this.start, this.end, 21);
         }

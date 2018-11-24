@@ -42,13 +42,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="2" />
-          <entry key="java" value="10569" />
+          <entry key="java" value="10680" />
           <entry key="txt" value="168" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10569" />
+          <entry key="JAVA" value="10680" />
           <entry key="PLAIN_TEXT" value="170" />
         </counts>
       </usages-collector>
@@ -58,14 +58,14 @@
     <favorites_list name="babysitter" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4896215">
+    <splitter split-orientation="horizontal" split-proportion="0.46703297">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+                <state relative-caret-position="556">
+                  <caret line="64" column="77" selection-start-line="64" selection-start-column="77" selection-end-line="64" selection-end-column="77" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -80,8 +80,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
-                  <caret line="170" selection-start-line="170" selection-end-line="170" />
+                <state relative-caret-position="612">
+                  <caret line="177" column="62" selection-start-line="177" selection-start-column="62" selection-end-line="177" selection-end-column="62" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -141,7 +141,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543026083075" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543027203225" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -316,15 +316,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AppointmentTest_start2AMEnd4AMForFamilyAEarns40Dollars - 2018.11.23 at 20h 00m 08s.xml">
-      <configuration name="AppointmentTest.start2AMEnd4AMForFamilyAEarns40Dollars" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_start2AMEnd4AMForFamilyAEarns40Dollars - 2018.11.23 at 20h 10m 01s.xml">
-      <configuration name="AppointmentTest.start2AMEnd4AMForFamilyAEarns40Dollars" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AppointmentTest_start2AMEnd4AMForFamilyAEarns40Dollars - 2018.11.23 at 20h 12m 04s.xml">
-      <configuration name="AppointmentTest.start2AMEnd4AMForFamilyAEarns40Dollars" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AppointmentTest_start2AMEnd4AMForFamilyAEarns40Dollars - 2018.11.23 at 20h 14m 16s.xml">
       <configuration name="AppointmentTest.start2AMEnd4AMForFamilyAEarns40Dollars" configurationId="JUnit" />
     </history-entry>
@@ -346,9 +337,18 @@
     <history-entry file="AppointmentTest - 2018.11.23 at 20h 19m 28s.xml">
       <configuration name="AppointmentTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.23 at 20h 21m 25s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.23 at 20h 36m 27s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AppointmentTest - 2018.11.23 at 20h 36m 35s.xml">
+      <configuration name="AppointmentTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52579000" />
+    <option name="totallyTimeSpent" value="53345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -433,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/AppointmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
+        <state relative-caret-position="612">
+          <caret line="177" column="62" selection-start-line="177" selection-start-column="62" selection-end-line="177" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -443,8 +443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Appointment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="41" column="53" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        <state relative-caret-position="556">
+          <caret line="64" column="77" selection-start-line="64" selection-start-column="77" selection-end-line="64" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
