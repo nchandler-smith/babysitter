@@ -26,14 +26,14 @@ public class Appointment {
     }
 
     public double calculateDollarsEarned() {
-        if (this.family == "") {
+        if (this.family.equals("")) {
             return this.calculateEarningsAtRate(this.start, this.end, hourlyRate);
         }
-        else if(this.family == "A") {
+        else if(this.family.equals("A")) {
             Calendar elevenPM = this.stringTimeToCalendar("11:00PM", this.start);
             Calendar invalidEndTime = this.stringTimeToCalendar("4:01AM", this.start);
 
-            if ( this.end.getTime().after(elevenPM.getTime()) ) {
+            if ( this.end.after(elevenPM) ) {
                 return this.calculateEarningsAtRate(elevenPM, this.end, 20)
                         + this.calculateEarningsAtRate(this.start, elevenPM, 15);
             }
@@ -45,25 +45,36 @@ public class Appointment {
 
             return this.calculateEarningsAtRate(this.start, this.end, 15);
         }
-        else if (this.family == "B") {
+
+        else if (this.family.equals("B")) {
             Calendar tenPM = this.stringTimeToCalendar("10:00PM", this.start);
             Calendar twelve01AM = Calendar.getInstance();
             twelve01AM.setTimeInMillis(tenPM.getTimeInMillis() + 7200001);
+
             if ( this.end.getTime().after(tenPM.getTime())
                 && this.end.getTime().before(twelve01AM.getTime()) ) {
                 return this.calculateEarningsAtRate(tenPM, this.end, 8) + 60;
             }
+
             else if (this.end.getTime().after(twelve01AM.getTime()) ) {
                 return this.calculateEarningsAtRate(twelve01AM, this.end, 15) + 76;
             }
+
             return this.calculateEarningsAtRate(this.start, this.end, 12);
         }
-        else if ( this.family == "C"){
+
+        else if ( this.family.equals("C")){
             Calendar ninePM = this.stringTimeToCalendar("9:00PM", this.start);
-            if (this.end.getTime().after(ninePM.getTime()) ) {
+
+            if ( this.start.after(ninePM) ) {
+                return this.calculateEarningsAtRate(this.start, this.end, 15);
+            }
+
+            if (this.end.after(ninePM) ) {
                 return this.calculateEarningsAtRate(ninePM, this.end, 15)
                         + this.calculateEarningsAtRate(this.start, ninePM, 21);
             }
+
             return this.calculateEarningsAtRate(this.start, this.end, 21);
         }
         return Double.parseDouble(null);
